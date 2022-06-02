@@ -6,7 +6,7 @@ def list_arg():
     i = 1
     len_arg = len(argv) - 1
     if len_arg < 1:
-        print(f"{len_arg} argument.")
+        print(f"{len_arg} arguments.")
     elif len_arg == 1:
         print(f"{len_arg} argument:")
         print(f"{len_arg}: {argv[len_arg]}")
