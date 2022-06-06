@@ -29,14 +29,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
 
 if __name__ == "__main__":
     add_tuple()
-
-
-tup1 = add_tuple((2, 3), (5, 6))
-print(tup1)
-tuple_a = (1, 89)
-tuple_b = (88, 11)
-new_tuple = add_tuple(tuple_a, tuple_b)
-print(new_tuple)
-
-print(add_tuple(tuple_a, (1, )))
-print(add_tuple(tuple_a, ()))
