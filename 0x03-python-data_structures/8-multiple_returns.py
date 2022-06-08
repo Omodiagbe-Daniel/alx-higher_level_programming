@@ -2,8 +2,8 @@
 
 
 def multiple_returns(sentence):
-    if sentence == '':
-        return None
+    if sentence == "":
+        sentence[0] = None
     else:
         len1 = len(sentence)
         first = sentence[0]
