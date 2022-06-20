@@ -6,8 +6,13 @@ def roman_to_int(roman_string):
         return 0
     else:
         sum = 0
-        dictionary = {'I': 1, 'IV': 4, 'V': 5, 'IX': 9, 'X': 10, 'XL': 40, 'L': 50, 'XC': 90, 'C': 100, 'CD': 400, 'D': 500, 'CM': 900, 'M': 1000}
-        for i, v in dictionary.items():
-            if i in roman_string:
-                sum += v
+        dictionary = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        for i in roman_string:
+            if len(roman_string) == 1:
+                sum = dictionary[i]
+            for j in range(len(roman_string) - 1):
+                if roman_string[j] > roman_string[j + 1]:
+                    sum = sum + dictionary[i]
+                elif roman_string[j] < roman_string[j + 1]:
+                    sum = list(dictionary)[i + 1] - dictionary[i]
         return sum
