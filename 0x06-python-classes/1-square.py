@@ -4,5 +4,5 @@
 
 class Square:
     def __init__(self, __size):
-""" instantiating size with no value or type"""
+        """ instantiating size with no value or type"""
         self.__size = __size
