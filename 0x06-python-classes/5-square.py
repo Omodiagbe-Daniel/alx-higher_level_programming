@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a class Square that defines a square by: (based on 3-square.py)"""
+"""a class Square that defines a square by: (based on 4-square.py)"""
 
 
 class Square:
@@ -10,9 +10,14 @@ class Square:
 
         self.__size = size
 
+    def my_print(self):
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print(#, end='')
+        print()
+
     def area(self):
         return self.__size * self.__size
-
     @property
     def size(self):
         return self.__size

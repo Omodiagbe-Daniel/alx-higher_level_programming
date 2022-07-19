@@ -1,4 +1,4 @@
-#!/usr/bin/puthon3
+#!/usr/bin/python3
 """a class Square that defines a square by: (based on 2-square.py)"""
 
 
