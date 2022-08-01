@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+""" a class based on 5-square.py"""
 
 
 class Square:
-    """a class square"""
+    """a class square that prints out
+       a square using # along side it position
+    """
     def __init__(self, size=0, position=(0, 0)):
+        """"initialization of attribues"""
+
         self.size = size
         self.position = position
 
