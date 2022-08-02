@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""adding two integers"""
 
 
 def add_integer(a, b=98):
@@ -10,7 +11,7 @@ def add_integer(a, b=98):
         raise TypeError("b must be an integer")
     if a == float('NaN') or a == float('inf'):
         raise TypeError("a must be an integer")
-    if b == ('NaN') or b == float('inf'):
+    if b == float('NaN') or b == float('inf'):
         raise TypeError("b must be an integer")
     return int(a) + int(b)
 
