@@ -57,3 +57,27 @@ Test for negative addition:
 Test for negative float:
 	>>> add_integer(-6.2)
 	92
+
+Test for NaN:
+	>>> add_integer('NaN')
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Test for NaN 2:
+	>>> add_integer(5, 'NaN')
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+Test for inf:
+	>>> add_integer('inf')
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Test for inf 2:
+	>>> add_integer(5, 'inf')
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
