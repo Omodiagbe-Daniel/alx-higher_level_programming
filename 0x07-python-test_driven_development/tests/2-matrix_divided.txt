@@ -42,3 +42,13 @@ Test if 0 is as div:
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+Test for equal sizes of rows:
+>>> matrix_divided([[3, 4, 5], [5, 7]], 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+Test for infinity:
+>>> matrix_divided([[3, 5], [4, 2]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
