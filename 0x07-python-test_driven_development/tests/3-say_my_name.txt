@@ -1,0 +1,35 @@
+The "3-say_my_name" module
+
+==================================
+
+Using say_my_name
+
+---------------------------------
+
+Importing the 3-say_my_name:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test when firstname is not str:
+>>> say_my_name(4, "Daniel")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+Test when lastname is not str:
+>>> say_my_name("Daniel", 4)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+Test when only first name is given:
+>>> say_my_name("Daniel")
+My name is Daniel 
+
+Test when first name is not given:
+>>> say_my_name("", "")
+My name is  
+
+Test when both arguments are given:
+>>> say_my_name("Daniel", "Omodiagbe")
+My name is Daniel Omodiagbe
+
