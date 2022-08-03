@@ -29,9 +29,23 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_float(self):
         """testing max float"""
-        list6 = [2.5, 7.9, 6, 4]
-        self.assertEqual(max_integer(list6), 7.9)
+        list5 = [2.5, 7.9, 6, 4]
+        self.assertEqual(max_integer(list5), 7.9)
 
+    def test_negative_numbers(self):
+        """for for negative numbers"""
+        list6 = [-9, -10 ,-6, -4]
+        self.assertEqual(max_integer(list6), -4)
+
+    def test_one_negative(self):
+        """testing if list contains one negative number"""
+        list7 = [4, 7, -9 , 0]
+        self.assertEqual(max_integer(list7), 7)
+
+    def test_max_at_beginning(self):
+        """test for max integer at the beginning"""
+        list8 = [8, 7, 6, 5]
+        self.assertEqual(max_integer(list8), 8)
 
 if __name__ == "__main__":
     unittest.main()
