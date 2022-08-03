@@ -1,6 +1,10 @@
 
-0t.txt module
+The "1-my_list" module
 ====================
+
+using the 1-my_list module
+
+-----------------------
 
 Importing the class from the module:
 >>> MyList = __import__("1-my_list").MyList
