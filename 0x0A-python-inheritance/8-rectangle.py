@@ -30,13 +30,4 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def integer_validator(self):
-        if type(self.__width) == int:
-            return True
-        if type(self.__height) == int:
-            return True
 
-        if self.__width > 0:
-            return True
-        if self.__height > 0:
-            return True

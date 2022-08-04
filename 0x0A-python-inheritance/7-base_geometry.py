@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """ based on 6-BaseGeometry """
 
 
