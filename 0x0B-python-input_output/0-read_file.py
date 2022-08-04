@@ -7,4 +7,4 @@ def read_file(filename=""):
 
     with open(filename, 'r', encoding="utf-8") as myfile:
         for line in myfile:
-         print(line, end='')
+            print(line, end='')
