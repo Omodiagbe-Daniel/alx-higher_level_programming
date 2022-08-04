@@ -1,4 +1,4 @@
-#!/usr/bin/oython3
+#!/usr/bin/python3
 """JSON representation"""
 
 
