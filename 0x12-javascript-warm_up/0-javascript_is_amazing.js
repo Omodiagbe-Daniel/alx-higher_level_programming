@@ -1,3 +1,7 @@
 #!/usr/bin/node
-const myVar = "JavaScript is amazing";
-console.log(myVar)
+/*
+  first JS program
+*/
+
+const myVar = 'JavaScript is amazing';
+console.log(myVar);
