@@ -13,4 +13,15 @@ module.exports = class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
+
+  rotate () {
+    const swap = this.width;
+    this.width = this.height;
+    this.height = swap;
+  }
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
 };
