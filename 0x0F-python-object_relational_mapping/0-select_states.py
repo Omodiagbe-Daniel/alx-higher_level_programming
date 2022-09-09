@@ -11,13 +11,14 @@
 import MySQLdb
 """importing MySQLdb"""
 
-db = MySQLdb.connect(host='localhost', port=3306, user='root',
-                     passwd='Nosetale_1', db='hbtn_0e_0_usa')
-cur = db.cursor()
-cur.execute("SELECT * FROM states ORDER BY states.id")
-states1 = cur.fetchall()
-if states1 is not None:
-    for state in states1:
-        print(state)
-    cur.close()
-    db.close()
+if __name__ == "__main__":
+    db = MySQLdb.connect(host='localhost', port=3306, user='root',
+                         passwd='Nosetale_1', db='hbtn_0e_0_usa')
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY states.id")
+    states1 = cur.fetchall()
+    if states1 is not None:
+        for state in states1:
+            print(state)
+        cur.close()
+        db.close()
