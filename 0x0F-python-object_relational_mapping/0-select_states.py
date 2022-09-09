@@ -18,8 +18,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     states1 = cur.fetchall()
-    if states1 is not None:
-        for state in states1:
-            print(f"({state[0]}, {state[1]})")
-        cur.close()
-        db.close()
+    for state in db:
+        print(f"({state[0]}, {state[1]})")
+    cur.close()
+    db.close()
