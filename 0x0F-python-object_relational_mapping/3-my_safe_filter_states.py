@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute("""SELECT * FROM states WHERE name LIKE
-                %s ORDER BY states.id""",(argv[4],))
+                %s ORDER BY states.id""", (argv[4],))
     states = cur.fetchall()
     for state in states:
         if state[1] == argv[4]:
