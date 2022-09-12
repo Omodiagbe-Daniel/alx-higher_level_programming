@@ -14,4 +14,5 @@ if __name__ == "__main__":
     states1 = cur.fetchall()
     if states1 is not None:
         for state in states1:
-            print(state)
+            if state[1][0] == 'N':
+                print(state)
