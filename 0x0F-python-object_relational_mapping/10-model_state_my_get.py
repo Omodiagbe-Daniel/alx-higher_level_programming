@@ -15,8 +15,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State).filter\
-    (State.name == (argv[4],)).order_by(State.id)
+    query = (session.query(State).filter
+             (State.name == (argv[4],)).order_by(State.id))
     user = query.first()
     if user is None:
         print("Not found")
