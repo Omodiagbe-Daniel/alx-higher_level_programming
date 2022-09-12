@@ -18,5 +18,3 @@ if __name__ == "__main__":
     if query is not None:
         user = query.first()
         print(f"{user.id}: {user.name}")
-    else:
-        print()
