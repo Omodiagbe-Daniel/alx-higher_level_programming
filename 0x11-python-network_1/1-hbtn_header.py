@@ -6,6 +6,7 @@ from urllib.request import urlopen, Request
 import sys
 
 
-req = Request(sys.argv[1])
-with urlopen(req) as res:
-    print(res.getheader('X-Request-Id'))
+if __name__ == "__main__":
+    req = Request(sys.argv[1])
+    with urlopen(req) as res:
+        print(res.getheader('X-Request-Id'))
