@@ -9,8 +9,8 @@ import sys
 
 
 if __name__ == "__main___":
-    data = parse.urlencode(sys.argv[2]).encode()
+    data = parse.urlencode({'email': sys.argv[2]}).encode('ascii')
     req = Request(sys.argv[1], data)
     with urlopen(req) as res:
         response = res.read()
-    print(response.decode('utf-8'))
+    print(f"{response.decode('utf-8')}")
