@@ -5,5 +5,5 @@
 */
 
 const doc = document.querySelector('header')
-doc = #FF0000
+doc.style.color = #FF0000
 
