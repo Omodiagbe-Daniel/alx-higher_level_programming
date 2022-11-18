@@ -30,7 +30,7 @@ class Base:
         """write JSON str represenation to a file"""
         list_obj = []
         if list_objs is None:
-            return
+            list_obj = []
         else:
             for obj in list_objs:
                 obj = obj.to_dictionary()
