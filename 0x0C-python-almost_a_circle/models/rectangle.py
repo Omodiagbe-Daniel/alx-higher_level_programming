@@ -78,25 +78,30 @@ class Rectangle(Base):
         return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
                 self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates the class"""
-        if len(args) < 1:
+        if args:
+            if len(args) < 1:
+                return
+            else:
+                self.id = args[0]
+            if len(args) < 2:
+                return
+            else:
+                self.width = args[1]
+            if len(args) < 3:
+                return
+            else:
+                self.height = args[2]
+            if len(args) < 4:
+                return
+            else:
+                self.x = args[3]
+            if len(args) < 5:
+                return
+            else:
+                self.y = args[4]
             return
         else:
-            self.id = args[0]
-        if len(args) < 2:
-            return
-        else:
-            self.width = args[1]
-        if len(args) < 3:
-            return
-        else:
-            self.height = args[2]
-        if len(args) < 4:
-            return
-        else:
-            self.x = args[3]
-        if len(args) < 5:
-            return
-        else:
-            self.y = args[4]
+            for key, val in kwargs.items():
+                setattr(Rectangle, key, val)
