@@ -104,4 +104,4 @@ class Rectangle(Base):
             return
         else:
             for key, val in kwargs.items():
-                self.__setattr__(key, val)
+                setattr(self, key, val)
