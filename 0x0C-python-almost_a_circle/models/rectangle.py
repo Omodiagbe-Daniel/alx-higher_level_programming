@@ -8,7 +8,7 @@ class Rectangle(Base):
     """defines a rectangle"""
     @property
     def width(self):
-        return self.__val
+        return self.__width
 
     @width.setter
     def width(self, val):
@@ -18,11 +18,11 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("number must be 0 or greater than 0")
             return
-        self.__val = val
+        self.__width = val
 
     @property
     def height(self):
-        return self.__val
+        return self.__height
 
     @height.setter
     def height(self, val):
@@ -32,11 +32,11 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("number must be 0 or greater than 0")
             return
-        self.__val = val
+        self.__height = val
 
     @property
     def x(self):
-        return self.__val
+        return self.__x
 
     @x.setter
     def x(self, val):
@@ -46,11 +46,11 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("number must be 0 or greater than 0")
             return
-        self.__val = val
+        self.__x = val
 
     @property
     def y(self):
-        return self.__val
+        return self.__y
 
     @y.setter
     def y(self, val):
@@ -60,7 +60,7 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("number must be 0 or greater than 0")
             return
-        self.__val = val
+        self.__y = val
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
