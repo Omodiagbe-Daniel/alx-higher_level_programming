@@ -60,3 +60,17 @@ class Base:
             dummy = Square(7)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances"""
+        try:
+            with open(f"{cls.__name__}.json", "r") as file:
+                cls_list = cls.from_json_string(file.read())
+        except:
+            return []
+        new_instances = []
+        for obj in cls_list:
+            instance = cls.create(**obj)
+            new_instances.append(instance)
+        return new_instances
