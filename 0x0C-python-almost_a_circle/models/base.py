@@ -67,7 +67,7 @@ class Base:
         try:
             with open(f"{cls.__name__}.json", "r") as file:
                 cls_list = cls.from_json_string(file.read())
-        except:
+        except FileNotFoundError:
             return []
         new_instances = []
         for obj in cls_list:
