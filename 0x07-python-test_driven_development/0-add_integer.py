@@ -7,11 +7,11 @@ def add_integer(a, b=98):
 
     if a == float('NaN') or a == float('inf'):
         raise TypeError("a must be an integer")
-    elif b == float('NaN') or b == float('inf'):
+    if b == float('NaN') or b == float('inf'):
         raise TypeError("b must be an integer")
-    elif type(a) not in (int, float):
+    if type(a) not in (int, float):
         raise TypeError("a must be an integer")
-    elif type(b) not in (int, float):
+    if type(b) not in (int, float):
         raise TypeError("b must be an integer")
     else:
         return int(a) + int(b)

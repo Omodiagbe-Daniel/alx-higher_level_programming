@@ -2,6 +2,7 @@
 """Base module"""
 
 import json
+import csv
 
 
 class Base:
@@ -74,3 +75,33 @@ class Base:
             instance = cls.create(**obj)
             new_instances.append(instance)
         return new_instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serializes in csv format"""
+        list_obj = []
+        if list_objs is None:
+            return list_obj
+        else:
+            for obj in list_objs:
+                obj = obj.to_dictionary()
+                list_obj.append(json_dict)
+
+        with open(f"{cls.__name__}.csv", mode="w") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerows(list_obj)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """deserializes the csv file"""
+        try:
+            with open(f"{cls.__name__}.csv", mode="r") as csvfile:
+                csv_reader = cls
+        except FileNotFoundError:
+            return []
+        new_instances = []
+        for obj in csv_reader:
+            instance = cls.create(**obj)
+            new_instances.append(instance)
+        return new_instances
+
