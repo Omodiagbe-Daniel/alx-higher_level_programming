@@ -9,4 +9,4 @@ fs.readFile(process.argv[2], function (err, data) {
     return console.error(err);
   }
   console.log(data.toString());
-})
+});
