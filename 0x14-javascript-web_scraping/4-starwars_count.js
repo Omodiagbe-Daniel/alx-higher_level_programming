@@ -17,12 +17,12 @@ request.get(url, function (err, response, body) {
     for (const key in file[i]) {
       if (key === 'characters') {
         for (const k in file[i][key]) {
-          if (k.includes('18')) {
+          if (file[i][key][k].endsWith('18/')) {
             count++;
           }
         }
       }
     }
   }
-  console.log(count - 1);
+  console.log(count);
 });
