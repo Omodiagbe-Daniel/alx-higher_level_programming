@@ -25,6 +25,9 @@ request.get(url, function (err, response, body) {
         count++;
       }
     }
+    if (count === 0) {
+      return {}
+    }
     obj[i] = count;
   }
   console.log(obj);
