@@ -25,10 +25,13 @@ request.get(url, function (err, response, body) {
         count++;
       }
     }
-    if (count === 0) {
-      return {}
-    }
     obj[i] = count;
   }
-  console.log(obj);
+  const obj2 = {};
+  for (const key in obj) {
+    if (obj[key] !== 0) {
+      obj2[key] = obj[key];
+    }
+  }
+  console.log(obj2);
 });
