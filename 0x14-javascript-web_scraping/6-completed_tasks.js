@@ -12,10 +12,15 @@ request.get(url, function (err, response, body) {
     console.log(err);
   }
   const file = JSON.parse(body);
+  let list = [];
+  for (let z = 0; z < file.length; z++) {
+    list.push(file[z].userId);
+  }
+  list = new Set(list);
   const obj = {};
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= list.size; i++) {
     let count = 0;
-    for (let j = 0; j < 200; j++) {
+    for (let j = 0; j < file.length; j++) {
       if (file[j].userId === i && file[j].completed === true) {
         count++;
       }
