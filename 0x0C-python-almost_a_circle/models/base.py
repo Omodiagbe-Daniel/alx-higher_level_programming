@@ -79,29 +79,31 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """serializes in csv format"""
-        list_obj = []
-        if list_objs is None:
-            return list_obj
-        else:
-            for obj in list_objs:
-                obj = obj.to_dictionary()
-                list_obj.append(json_dict)
+        file_name = cls.__name__ + ".csv"
 
-        with open(f"{cls.__name__}.csv", mode="w") as csvfile:
-            csv_writer = csv.writer(csvfile)
-            csv_writer.writerows(list_obj)
+        with open(file_name, mode="w", newline='', encoding="UTF8") as fd:
+            write_this = csv.writer(fd, delimiter=" ")
+
+            if cls.__name__ == "Rectangle":
+                for item in list_objs:
+                    string = ""
+                    item = item.to_dictionary()
+                    string += (str(item["id"]) + "," +
+                               str(item["width"]) + "," +
+                               str(item["height"]) + "," +
+                               str(item["x"]) + "," + str(item["y"]))
+                    write_this.writerow(string)
+
+            if cls.__name__ == "Square":
+                for item in list_objs:
+                    string = ""
+                    item = item.to_dictionary()
+                    string += (str(item["id"]) + "," +
+                               str(item["size"]) + "," +
+                               str(item["x"]) + "," + str(item["y"]))
+                    write_this.writerow(string)
 
     @classmethod
     def load_from_file_csv(cls):
         """deserializes the csv file"""
-        try:
-            with open(f"{cls.__name__}.csv", mode="r") as csvfile:
-                csv_reader = cls
-        except FileNotFoundError:
-            return []
-        new_instances = []
-        for obj in csv_reader:
-            instance = cls.create(**obj)
-            new_instances.append(instance)
-        return new_instances
-
+        return ([])
