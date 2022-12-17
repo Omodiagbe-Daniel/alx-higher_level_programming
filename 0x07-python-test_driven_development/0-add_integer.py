@@ -5,16 +5,12 @@
 def add_integer(a, b=98):
     """function that adds two integers"""
 
-    if a == float('NaN') or a == float('inf'):
+    if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
-    if b == float('NaN') or b == float('inf'):
+    if ((not isinstance(b, int) and not isinstance(b, float))):
         raise TypeError("b must be an integer")
-    if type(a) not in (int, float):
-        raise TypeError("a must be an integer")
-    if type(b) not in (int, float):
-        raise TypeError("b must be an integer")
-    else:
-        return int(a) + int(b)
+
+    return int(a) + int(b)
 
 
 if __name__ == "__main__":
