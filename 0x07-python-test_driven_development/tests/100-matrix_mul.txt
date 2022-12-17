@@ -1,0 +1,80 @@
+The "100-matrix_mul module"
+========================================
+
+Using the the 100-matrix_mul module
+
+----------------------------------------
+ Importing the 100-matrix_mul module
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Test list:
+>>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+[[13, 16]]
+
+Test if m_a is a list:
+>>> matrix_mul("4", [[3, 4], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list
+
+Test if m_b is a list:
+>>> matrix_mul([[1, 2]], "4")
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list
+
+Test if m_a is a list of lists:
+matrix_mul([1, 2], [[3, 4], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+Test if m_b is a list of lists:
+>>> matrix_mul([[1, 2]], [5, 8])
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
+
+Test if m_a is empty:
+>>> matrix_mul([], [[3, 4], [5, 6]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+Test if m_b is empty
+>>> matrix_mul([[1, 2]], [])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+Test if an ele in m_a is not an int or a float:
+>>> matrix_mul([[1, "b"]], [[3, 4], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+Test if an ele in m_b is not an int or a float:
+>>> matrix_mul([[1, 2]], [[3, 'b'], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+Test if m_a is a rectangle:
+>>> matrix_mul([[1, 2], [2, 5, 6]], [[3, 6], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must be of the same size
+
+Test if m_b is a rectangle:
+>>> matrix_mul([[1, 2], [2, 5]], [[3, 6, 8], [5, 6]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must be of the same size
+
+Test if m_a and m_b can't bve multiplied:
+>>> matrix_mul([[1, 2], [2, 5]], [[3, 6,]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
