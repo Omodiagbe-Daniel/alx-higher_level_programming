@@ -1,4 +1,4 @@
-The "2-matrix_didived module"
+clThe "2-matrix_didived module"
 =========================================
 
 Using the 2-matrix_divided module
