@@ -19,7 +19,7 @@ def print_status():
             size += int(line[-1])
             code = line[-2]
             status_codes[code] += 1
-        except (ValueError, TypeError):
+        except:
             continue
         if counter == 9:
             print("File size: {}".format(size))
